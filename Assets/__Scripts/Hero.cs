@@ -24,7 +24,8 @@ public class Hero : MonoBehaviour {
 
 
     //TODO: Add function delegate declaration
-
+    public delegate void WeaponFireDelegate();
+    public WeaponFireDelegate fireDelegate;
 
 
 	void Start()
@@ -70,12 +71,13 @@ public class Hero : MonoBehaviour {
         // Use the fireDelegate to fire Weapons
         // First, make sure the button is pressed: Axis("Jump")
         // Then ensure that fireDelegate isn't null to avoid an error
-
+        if(Input.GetAxis("Jump")== 1 && fireDelegate != null)
+        {
+            fireDelegate();
+        }
 
 
     }
-
-
 
 
     //TODO: replace or comment out later
@@ -96,7 +98,7 @@ public class Hero : MonoBehaviour {
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
