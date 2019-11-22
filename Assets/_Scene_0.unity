@@ -333,7 +333,7 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
-    damageOnHit: 1
+    damageOnHit: 10
     continuousDamage: 0
     delayBetweenShots: 0.2
     velocity: 50
@@ -343,7 +343,7 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
     projectileColor: {r: 0.09803922, g: 0.7294118, b: 0.93333334, a: 1}
-    damageOnHit: 1
+    damageOnHit: 10
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
@@ -1313,6 +1313,7 @@ GameObject:
   - component: {fileID: 2116799375}
   - component: {fileID: 2116799374}
   - component: {fileID: 2116799373}
+  - component: {fileID: 2116799376}
   m_Layer: 8
   m_Name: Shield
   m_TagString: Untagged
@@ -1392,3 +1393,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116799371}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2116799376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116799371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082a6c0e92121ea418a8b7fb25e4f63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationsPerSecond: 0.1
+  levelShown: 0
